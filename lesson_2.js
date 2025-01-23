@@ -388,3 +388,40 @@ outerLoop: for (let i = 0; i < 3; i++) {
     console.log(`i=${i}, j=${j}`);
   }
 }
+
+
+// --- Loops ---
+
+// TASKS FOR PRACTICE
+
+// Task 1: Counting Down
+// Write a program using a `while` loop that counts down from 10 to 1 and prints each number.
+// After the countdown ends, print "Liftoff!".
+
+
+// Task 2: Password Validation
+// Using a `do...while` loop, ask the user to enter a password until they provide a password
+// that is at least 6 characters long. After the user enters a valid password, print "Password accepted!".
+
+
+// Task 3: Sum of Numbers
+// Write a program using a `for` loop that calculates the sum of all numbers from 1 to 50
+// and prints the result.
+
+
+// Task 4: Multiplication Table
+// Create a multiplication table for any number (e.g., 7) using a `for` loop.
+
+
+// Task 5: Odd Numbers Only
+// Write a program using a `for` loop that prints only the odd numbers between 1 and 20.
+// Use the `continue` statement to skip even numbers.
+
+
+// Task 6: Find the First Divisible Number
+// Write a program that finds the first number divisible by 7 in the range from 1 to 100.
+// Use a `for` loop with the `break` statement to stop as soon as the number is found.
+
+
+// Task 7: Nested Loop - Multiplication Table
+// Using nested loops, create a complete multiplication table for numbers from 1 to 5.
