@@ -1,23 +1,22 @@
 // Resolving Expressions
-console.log('number' + 3 + 3); //
+console.log('number' + 3 + 3); // 
 console.log(null + 3); // 
 console.log(5 && "qwerty"); // 
-console.log(+'40' + +'2' + "javaSkript"); // 
+console.log(+'40' + +'11' + "javaSсript"); // 
 console.log('10' - 5 === 6); // 
 console.log(true + false); // 
-console.log('4px' - 3); // 
-console.log('4' - 3); // 
-console.log('6' + 3 ** 0); // 
+console.log('4px' - 3); //
+console.log('4' - 3); // 1
+console.log("6" + 3 * 3); // 
 console.log(12 / '6'); // 
-console.log('10' + (5 === 6)); // 
-console.log(null == ''); // 
-console.log(3 ** (9 / 3)); // 
-console.log(!!'false' == !!'true'); // 
+console.log('5' + 1 === 6); // 
+console.log(null == undefined); // 
+console.log(3 ** (9 / 3)); //  
 console.log(0 || '0' && 1); // 
-console.log((+null == false) < 1); // 
-console.log(false && true || true); // 
-console.log(false && (false || true)); // 
-console.log((+null == false) < 1 ** 5); // 
+console.log((+null == false) < 1); // 0 == 0 , true 1<1
+console.log(false && true || true); // false || true 
+console.log(false && (false || true)); // false && true 
+console.log((+null == false) < 1 ** 5); // true < 1 
 
 
 //--------------------------------------------------------------------------------------------------
@@ -27,7 +26,7 @@ console.log((+null == false) < 1 ** 5); //
 
 // Example 1: Basic IF statement
 let cost = 0;
-const subscription = "pro";
+const subscription = "basic";
 
 if (subscription === "pro") {
     cost = 100; // If the condition is true, set cost to 100
@@ -35,7 +34,8 @@ if (subscription === "pro") {
 
 console.log(cost); 
 
-// Using a ternary operator for the same logic:
+// Using a ternary operator for the same logic:ё
+const subscription = "pro";
 const cost1 = subscription === "pro" ? 100 : 0; 
 console.log(cost1); 
 
@@ -43,7 +43,7 @@ console.log(cost1);
 
 // Example 2: Using IF and ELSE
 let cost2;
-const subscription2 = "free";
+const subscription2 = "pro";
 
 if (subscription2 === "pro") {
     cost2 = 100; // If subscription is "pro", set cost to 100
@@ -51,7 +51,7 @@ if (subscription2 === "pro") {
     cost2 = 0; // Otherwise, set cost to 0
 }
 
-console.log(cost2); // Output: 0
+console.log(cost2); // 
 
 // ELSE...IF
 
@@ -76,7 +76,7 @@ console.log(cost3);
 // Example 4: Simplifying IF...ELSE using a ternary operator
 const age = 20;
 const type = age >= 18 ? "adult" : "child"; 
-console.log(type); // Output: "adult"
+console.log(type); // 
 
 // Example 5: Finding the bigger number
 const num1 = 5;
@@ -88,23 +88,23 @@ console.log(bigNumber); // Output: 10
 
 // Example 6: Using SWITCH for multiple conditions
 let cost4;
-const subscription4 = "premium";
+const subscription4 = "free";
 
-switch (subscription4) {
-    case "free":
+switch (subscription4) { // "premium ===
+    case "free": // "premium" ===  "free"
         cost4 = 0;
         break;
-    case "pro":
+    case "pro": // "premium" === "pro"
         cost4 = 100;
         break;
-    case "premium":
+    case "premium":  // "premium" === "premium" true
         cost4 = 500;
         break;
     default:
         console.log("Invalid subscription type");
 }
 
-console.log(cost4); // Output: 500
+console.log(cost4); // 
 
 
 // TRY...CATCH
@@ -118,7 +118,7 @@ function divide(a, b) {
         return a / b;
     } catch (error) {
         console.error("Error: " + error.message);
-        return null; // Return null when an error occurs
+        return null; // 
     }
 }
 
@@ -156,21 +156,65 @@ try {
 // TASKS
 
 // Task 1: Write a program that checks if a number is even or odd.
-const number = 7; // Replace with any number
+const number = 8; // Replace with any number
+let result = number % 2 === 0 ? "even" : "odd"
+console.log(`The number is ${result}`)
+
+if (number % 2 === 0){
+ result = "even"
+ console.log(`The number is ${result}`)
+} else{ 
+  result = "odd"
+  console.log(`The number is ${result}`)
+}
+
 
 
 // Task 2: Write a program that calculates the cost of a movie ticket based on age.
-const age2 = 45; // Replace with any age
+const age2 = 6; // Replace with any age
+
+// 1. create veriables fir result 
+// 2. Conditional statement
+// child(0-16), students (17-25), adult (25-55), seniors(55-100)
+
+let ticketCost; 
+if(age2<=16){
+  ticketCost = 5; 
+} else if(age2>16 && age2<25){
+  ticketCost = 7;
+}else if(age2>=25 && age2<55){
+  ticketCost = 12;
+} else{
+  ticketCost = 4;
+}
+
+console.log(`The Ticket cost is ${ticketCost}`)
+
 
 
 // Task 3: Write a program that finds the largest of three numbers.
-const numA = 25;
-const numB = 13;
+const numA = 51;
+const numB = 54;
 const numC = 42;
+
+let largest;
+if (numA > numB){
+  if (numA > numC) {
+    largest = numA;
+  } else {
+    largest = numC;
+  } 
+} else {
+  if (numB > numC){
+    largest = numB;
+  } else {
+    largest = numC;
+  }
+}
+console.log(largest)
 
 // Task 4: Write a program that determines if a number is positive, negative, or zero.
 const numD = -5; // Replace with any number
-
 
 
 
@@ -208,10 +252,10 @@ while (condition) {
 /*
 Example 1: Simple while loop
 */
-let i = 0;
+let i = 0; //1 , 2
 while (i < 5) {
-  console.log('i = ' + i);
-  i++;
+  console.log('i = ' + i); // 0; 1; 2; 3; 
+  i++; // i= i+1 // 1 , 2 , 
 }
 
 /*
@@ -245,7 +289,7 @@ Practical example: Filling up hotel rooms
 */
 let clients = 18;
 const maxRooms = 25;
-while (clients < maxRooms) {
+while (clients <= maxRooms) {
   console.log(`Currently filled: ${clients}`);
   clients++;
 }
@@ -267,9 +311,9 @@ Example 1: Basic do...while loop
 */
 let j = 0;
 do {
-  console.log("j = " + j);
-  j++;
-} while (j < 3);
+  console.log("j = " + j); // 0 1 2
+  j++; // 1 / 2 /3 
+} while (j < 3); //1 /2  3
 
 console.log("After the loop, j = " + j);
 
@@ -302,9 +346,10 @@ for (initialization; condition; step) {
 
 /*
 Example 1: A basic for loop
+
 */
-for (let i = 0; i <= 10; i += 2) {
-  console.log(i);
+for (let i = 0; i <= 10; i += 2) { // i = i + 2
+  console.log(i); // 0; 2; 4; 6; 8; 10
 }
 
 /*
@@ -313,7 +358,7 @@ Example 2: Calculating the sum of numbers up to a target value
 const target = 5;
 let sum = 0;
 for (let i = 1; i <= target; i++) {
-  sum += i;
+  sum += i; // sum = sum +1
 }
 console.log("Sum: ", sum);
 
@@ -346,7 +391,7 @@ console.log("Loop ended");
 The `continue` statement skips the current iteration of the loop and proceeds with the next one.
 */
 const number = 10;
-for (let i = 0; i < number; i++) {
+for (let i =3; i < number; i++) {
   if (i % 2 === 0) {
     continue; // Skip even numbers
   }
