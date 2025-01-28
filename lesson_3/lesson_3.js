@@ -1,3 +1,12 @@
+let x = 5; //6
+let y = ++x; // 6
+console.log(x)
+console.log(y)
+
+let x = 5; // 6
+let y = x++; // 5 
+console.log(x)
+console.log(y)
 
 // JavaScript Practice Exercises for Loops, Conditions, and Functions
 
@@ -83,22 +92,22 @@ Think of it as an action that can be performed on or by that object.
 
 
 // String Methods:
-let str = "Hello World";
+let str = "Hello World some other"; // H = 0, e = 1, l = 2, l = 3
 str.length                 // 11
 str.toUpperCase()         // "HELLO WORLD"
 str.toLowerCase()         // "hello world"
 str.trim()               // Removes whitespace
 str.slice(0, 5)          // "Hello"
-str.split(" ")           // ["Hello", "World"]
+console.log(str.split(""))           // ["Hello", "World"]
 str.replace("Hello", "Hi")// "Hi World"
 str.includes("Hello")     // true
 str.indexOf("World")      // 6
-str.charAt(0)            // "H"
+str.charAt(6)            // "H"
 str.substring(0, 5)      // "Hello"
 
 
 // Number Methods:
-let num = 123.456;
+let num = "123.456";
 num.toString()           // "123.456"
 num.toFixed(2)          // "123.46"
 num.toPrecision(4)      // "123.5"
@@ -120,7 +129,7 @@ Math.ceil(3.1)          // 4
 Math.abs(-5)            // 5
 Math.max(1, 2, 3)       // 3
 Math.min(1, 2, 3)       // 1
-Math.random()           // Random number between 0 and 1
+Math.random()           // Random number between 0 and 1 
 Math.pow(2, 3)          // 8
 Math.sqrt(16)           // 4
 
@@ -133,6 +142,7 @@ Math.sqrt(16)           // 4
 
 // Creating an array
 let fruits = ['apple', 'banana', 'orange'];
+
 
 // 1. Basic Array Methods
 
@@ -159,17 +169,27 @@ console.log('After shift:', fruits);
 let numbers = [1, 2, 3, 4, 5];
 
 // map() - creates new array with results of callback
-let doubled = numbers.map(num => num * 2);
-console.log('Original array:', numbers);
-console.log('Mapped array (doubled):', doubled);
+// let doubled = numbers.map(num => num * 2); // 
+// console.log('Original array:', numbers);
+// console.log('Mapped array (doubled):', doubled);
 
 // filter() - creates new array with elements that pass test
 let evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log('Filtered array (even numbers):', evenNumbers);
 
+
+let numbers = [1, 2, 3, 4, 5];
 // reduce() - reduces array to single value
 let sum = numbers.reduce((acc, curr) => acc + curr, 0);
 console.log('Reduced array (sum):', sum);
+
+//     Current V      Accumulator     Action  
+// 1.     1              0             1+0 = 1
+// 2.     2              1             1 + 2 = 3
+// 3.     3               3            3+3 = 6
+// 4.     4             6             6+4 = 10
+// 5.     5               10           5 + 10 = 15
+
 
 // PART 2: OBJECT METHODS
 // ---------------------
@@ -204,7 +224,7 @@ console.log('Object entries:', Object.entries(person));
 // Function Declaration
 
 // 1. Declaring the function multiply
-function multiply() {
+function multiply(a, b) {
     // Function body
     console.log("This is a log at the moment of calling the function multiply");
   }
@@ -273,10 +293,11 @@ checkAge();
 
 
 // 1. Function Declaration
+console.log(greet('Alice'));
+
 function greet(name) {
     return `Hello, ${name}!`;
 }
-console.log(greet('Alice'));
 
 // 2. Function Expression
 const goodbye = function(name) {
@@ -357,14 +378,24 @@ const getPassFail = (scores) => {
     // Write your code here
 };
 
-/* Task 3: Complex Array Operations
-Create a function that takes an array of objects with 'name' and 'age' properties,
-and returns the average age of all people whose names start with 'A'
-Example: [{name: 'Alice', age: 25}, {name: 'Bob', age: 30}, {name: 'Anna', age: 35}]
-should return 30
-*/
 
-// Your solution here
-const averageAgeStartingWithA = (people) => {
-    // Write your code here
-};
+
+const convertToCelsius = function (temp) {
+    return (temp - 32)*5/9 ;
+}
+console.log(convertToCelsius(32))
+
+
+const polindromes = function (str) {
+// 1. convert visa verso 
+// 2. check and back true or false
+let strReverse = str.split('').reverse().join('');
+console.log(strReverse)
+if (str === str.split('').reverse().join('')) {
+    return true;
+} else {
+    return false
+}
+}
+
+console.log(polindromes("animal loots foliated detail of stool lamina"))

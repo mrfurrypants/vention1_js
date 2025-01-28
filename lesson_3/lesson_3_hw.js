@@ -105,3 +105,28 @@ const removeFromArray = function() {
 };
 
 removeFromArray([1, 2, 3, 4], 3); // should remove 3 and return [1,2,4]
+
+
+
+/* Task 08: Array Methods
+Create a function that takes an array of numbers and returns a new array
+where each number is multiplied by its index + 1
+Example: [1, 2, 3] should return [1, 4, 9]
+*/
+
+// Your solution here
+const multiplyByIndex = (arr) => {
+    // Write your code here
+};
+
+/* Task 09: Object Transformation
+Create a function that takes an object of student scores
+and returns an object with the same keys but with pass/fail values
+(pass if score >= 60)
+Example: { John: 80, Jane: 45 } should return { John: 'pass', Jane: 'fail' }
+*/
+
+// Your solution here
+const getPassFail = (scores) => {
+    // Write your code here
+};
