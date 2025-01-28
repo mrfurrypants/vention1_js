@@ -368,22 +368,3 @@ should return 30
 const averageAgeStartingWithA = (people) => {
     // Write your code here
 };
-
-// TEST CASES
-
-// Test Task 1
-const numbers1 = [1, 2, 3];
-console.log('Task 1 Test:', multiplyByIndex(numbers1)); // Should output [1, 4, 9]
-
-// Test Task 2
-const scores = { John: 80, Jane: 45, Bob: 60 };
-console.log('Task 2 Test:', getPassFail(scores)); 
-// Should output { John: 'pass', Jane: 'fail', Bob: 'pass' }
-
-// Test Task 3
-const people = [
-    { name: 'Alice', age: 25 },
-    { name: 'Bob', age: 30 },
-    { name: 'Anna', age: 35 }
-];
-console.log('Task 3 Test:', averageAgeStartingWithA(people)); // Should output 30
